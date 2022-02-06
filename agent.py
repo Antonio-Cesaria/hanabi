@@ -31,7 +31,8 @@ statuses = ["Lobby", "Game", "GameHint"]
 status = statuses[0]
 
 
-RULES = [15  9 17  2  5 16  3  6 10 14  7  1 21 11 22 18  8 20 13 12  4  0 19]
+RULES = [15, 9, 17,  2,  5, 16,  3,  6, 10, 14,  7,  1, 21, 11, 22, 18,  8, 20, 13, 12,  4,  0, 19]
+
 myTurn = False
 infos = None
 
