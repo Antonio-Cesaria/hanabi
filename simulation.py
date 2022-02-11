@@ -81,24 +81,24 @@ def manageDiscardResponse(world, playerName, cardPos):
         os._exit(-1)
 
 # Function that updates the HintTable after an Hint
-def manageHintTableHintUpdate(data, hintTable, slots):
+def manageHintTableHintUpdate(data, hintTable, slots, id):
     for i in range(slots):
         if i in data.positions:
             if data.type == "color":
-                hintTable[int(data.destination[-1:])
+                hintTable[id
                           ][i].directHintColor(data.value)
             elif data.type == "value":
-                hintTable[int(data.destination[-1:])
-                          ][i].directHintValue(data.value)
+                hintTable[id][i].directHintValue(data.value)
             else:
                 print("ERROR: Wrong hint type")
         else:
             if data.type == "color":
-                hintTable[int(data.destination[-1:])
+                hintTable[id
                           ][i].undirectHintColor(data.value)
             elif data.type == "value":
-                hintTable[int(data.destination[-1:])
-                          ][i].undirectHintValue(data.value)
+                print(data.destination)
+                
+                hintTable[id][i].undirectHintValue(data.value)
             else:
                 print("ERROR: Wrong hint type")
 
